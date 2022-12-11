@@ -4,7 +4,7 @@ public class ThreadSafeSingleton {
     private static volatile ThreadSafeSingleton instance;
     private ThreadSafeSingleton() {};
 
-    private static synchronized ThreadSafeSingleton getInstance() {
+    public static synchronized ThreadSafeSingleton getInstance() {
         if (instance != null) {
             return instance;
         } else {
