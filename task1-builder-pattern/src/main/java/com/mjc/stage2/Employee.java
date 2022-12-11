@@ -69,13 +69,11 @@ public class Employee {
     }
 
     public static class EmployeeBuilder {
-        private Employee employee;
+        Employee employee = new Employee();
+        public EmployeeBuilder setName (String name) {
+        employee.name = name;
+        return this;
 
-        public EmployeeBuilder() {
-            this.employee = new Employee();
-        }
-        public void setName (String name) {
-            employee.setName(name);
         }
         public void setLastName (String lastName) {
             employee.setLastName(lastName);
@@ -90,7 +88,8 @@ public class Employee {
             employee.setEmail(email);
         }
         public void setCarNumber (String carNumber){
-            employee.setCarNumber(carNumber);
+
+        employee.setCarNumber(carNumber);
         }
         public Employee getEmployee() {
             return this.employee;
