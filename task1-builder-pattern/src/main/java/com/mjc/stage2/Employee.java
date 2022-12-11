@@ -95,8 +95,8 @@ public class Employee {
             employee.setCarNumber(carNumber);
             return this;
         }
-        public Employee getEmployee() {
-            return this.employee;
+        public Employee build() {
+            return employee;
         }
     }
 }
